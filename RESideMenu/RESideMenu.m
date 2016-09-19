@@ -777,6 +777,11 @@
 #pragma mark -
 #pragma mark View Controller Rotation handler
 
+- (UIInterfaceOrientationMask) supportedInterfaceOrientations
+{
+    return self.contentViewController.supportedInterfaceOrientations;
+}
+
 - (BOOL)shouldAutorotate
 {
     return self.contentViewController.shouldAutorotate;
